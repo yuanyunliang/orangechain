@@ -1,0 +1,39 @@
+server:
+    port: 9999
+    servlet:
+        context-path: /orangechain
+spring:
+    application:
+        name: my-dubbo-provider-app
+    http:
+        encoding:
+        charset: UTF-8
+        enabled: true
+        force: true
+    datasource:
+        driverClassName: com.mysql.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/orange_chain?useSSL=false
+        username: root
+        password: 123456
+        poolPingConnectionsNotUsedFor: 60000
+        removeAbandoned: true
+        connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+        minIdle: 1
+        validationQuery: SELECT 1 FROM DUAL
+        initialSize: 5
+        maxWait: 60000
+        poolPreparedStatements: false
+        filters: stat,wall
+        testOnBorrow: false
+        testWhileIdle: true
+        minEvictableIdleTimeMillis: 300000
+        timeBetweenEvictionRunsMillis: 60000
+        testOnReturn: false
+        maxActive: 50
+        druid:
+            user: admin
+            password: admin
+
+    jpa: 
+        hibernate:
+            ddl-auto: none
