@@ -21,7 +21,6 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
  * @Description
- * @author 张国豪
  */
 @SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
 //@EnableDubboConfiguration
